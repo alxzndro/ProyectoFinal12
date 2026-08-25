@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-dorado {
+    color: #c5a059;
+    background-color: transparent;
+    border: 1px solid #c5a059;
+    transition: all 0.3s ease;
+}
+
+.btn-dorado:hover {
+    background-color: #c5a059;
+    color: black;
+}
