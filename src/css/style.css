@@ -50,3 +50,11 @@ body {
     width: 100%;
 }
 
+.color-redes {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.color-redes:hover {
+    color: #C9A227;
+}
