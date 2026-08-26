@@ -1,0 +1,52 @@
+<h1>Lista de Tareas</h1>
+    <!-- Campo de entrada y botón para agregar tareas -->
+    <input type="text" id="nuevaTarea" placeholder="Escribe una nueva tarea" />
+    <button id="agregarTareaBtn">Agregar Tarea</button>
+    <ul id="tareas"></ul>
+    <p id="mensaje"></p>
+
+
+CSS
+#tareas {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tarea {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .tarea-completada {
+            text-decoration: line-through;
+            color: grey;
+        }
+
+        button {
+            background-color:plum;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: purple;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+        }
+
+        #mensaje {
+            color:blue;
+            font-size: 14px;
+
