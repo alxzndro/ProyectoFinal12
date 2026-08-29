@@ -5,9 +5,9 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="./src/asstes/images/Zayo.jpeg"/>
+    <link rel="icon" type="image/svg+xml" href="./src/asstes/images/Zayo.jpeg" />
     <title>Zayo</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -24,10 +24,10 @@
   </head>
   <body>
 
-<nav class="fixed top-0 start-0 w-full z-50 bg-black border-b border-neutral-800">
+<nav class="bg-black dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-black-200 dark:border-black-600">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="./src/asstes/images/ZayoLogo2.png" class="h-8" alt="Zayo Logo" width="100">
+      <img src="/src/asstes/images/ZayoLogo2.png" class="h-8" alt="Zayo Logo">
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
     <a href="/src/pages/reserva.html">
@@ -50,7 +50,7 @@
     </a>
 </li>
      <li>
-    <a href="/src/pages/menu.html"
+    <a href="/index.html"
        class="color-letra" 
        aria-current="page">
         MENÚ
@@ -64,7 +64,7 @@
     </a>
 </li>
       <li>
-    <a href="/src/pages/historia.html"
+    <a href="/index.html"
        class="color-letra"
        aria-current="page">
         HISTORIA
@@ -77,47 +77,112 @@
         GALERÍA
     </a>
 </li>
-
-
     </ul>
   </div>
   </div>
 </nav>
-
-<br><br>
-<br><br>
-<br><br>
-
-<section class="bg-black dark:bg-gray-900">
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div class="mr-auto place-self-center lg:col-span-7">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Restaurante Zayo ¡Comida llena de luvia de sensaciones! </h1><br>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"> nace con la idea de crear un espacio donde la gastronomía, la elegancia y los buenos momentos se encuentren en un mismo lugar. Nuestra propuesta combina sabores cuidadosamente seleccionados con una presentación sofisticada y un ambiente moderno y acogedor.</p><br>
-            
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Get started
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Speak to Sales
-            </a> 
+    <!-- Hero Section -->
+    <section class="bg-gray-900 bg-blend-multiply bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1974&auto=format&fit=crop');">
+        <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-32">
+            <br>
+            <br>
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Nuestros Locales</h1>
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Disfruta de la mejor gastronomía ecuatoriana e internacional con las vistas más espectaculares de la ciudad.</p>
         </div>
-        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="/src/asstes/images/Carne1.jpg" alt="mockup">
-                   
-    </div>
-</section>
+    </section>
 
+    <!-- Sección de Tarjetas de Locales -->
+    <section class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Local 1: Panecillo -->
+            <div class="bg-black rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <a href="#mapa-ubicacion" class="block overflow-hidden rounded-t-lg">
+                    <img class="w-full h-48 object-cover transition duration-500 hover:scale-105" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1974&auto=format&fit=crop" alt="Zayo Panecillo" />
+                </a>
+                <div class="p-5">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white-900">Zayo Panecillo</h5>
+                    <div class="text-white-600 mb-4 text-sm space-y-2">
+                        <p><span class="font-semibold text-whte-900">Dirección:</span> Cima del Panecillo, Gral. Melchor Aymerich, Quito.</p>
+                        <p><span class="font-semibold text-white-900">Horario:</span> Lun - Dom: 12:00 PM - 10:00 PM</p>
+                        <p><span class="font-semibold text-white-900">Teléfono:</span> +593 2-317-0162</p>
+                    </div>
+                    <a href="#mapa-ubicacion" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-yellow-600/50 focus:ring-4 focus:outline-none focus:ring-red-300">
+                        Ver Mapa
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
+            <!-- Local 2: Itchimbía -->
+            <div class="bg-black rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <a href="#mapa-ubicacion" class="block overflow-hidden rounded-t-lg">
+                    <img class="w-full h-48 object-cover transition duration-500 hover:scale-105" src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=2070&auto=format&fit=crop" alt="Zayo Itchimbía" />
+                </a>
+                <div class="p-5">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white-900">Zayo Itchimbía</h5>
+                    <div class="text-white-600 mb-4 text-sm space-y-2">
+                        <p><span class="font-semibold text-white-900">Dirección:</span> Parque Itchimbía, Palacio de Cristal, Quito.</p>
+                        <p><span class="font-semibold text-white-900">Horario:</span> Mar - Dom: 12:30 PM - 10:30 PM</p>
+                        <p><span class="font-semibold text-white-900">Teléfono:</span> +593 2-295-6019</p>
+                    </div>
+                    <a href="#mapa-ubicacion" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-yellow-600/50 focus:ring-4 focus:outline-none focus:ring-red-300">
+                        Ver Mapa
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
+            <!-- Local 3: Cumbayá -->
+            <div class="bg-black rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <a href="#mapa-ubicacion" class="block overflow-hidden rounded-t-lg">
+                    <img class="w-full h-48 object-cover transition duration-500 hover:scale-105" src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?q=80&w=2070&auto=format&fit=crop" alt="Zayo Cumbayá" />
+                </a>
+                <div class="p-5">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white-900">Zayo Cumbayá</h5>
+                    <div class="text-white-600 mb-4 text-sm space-y-2">
+                        <p><span class="font-semibold text-white-900">Dirección:</span> Vía Interoceánica, Francisco de Orellana, Cumbayá.</p>
+                        <p><span class="font-semibold text-white-900">Horario:</span> Lun - Dom: 12:00 PM - 11:00 PM</p>
+                        <p><span class="font-semibold text-white-900">Teléfono:</span> +593 2-289-7123</p>
+                    </div>
+                    <a href="#mapa-ubicacion" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-yellow-600/50 focus:ring-4 focus:outline-none focus:ring-red-300">
+                        Ver Mapa
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
+        </div>
+    </section>
 
-    <div id="app"></div>
-    <script type="module" src="/src/js/main.js"></script>
- 
-  
-        <!-- Footer -->
- <footer class="color-letra2">
+    <!-- Sección de Ubicación con Mapa Interactivo -->
+    <section id="mapa-ubicacion" class="bg-black py-12 border-t border-gray-200">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-extrabold text-white-900 sm:text-4xl">Encuéntranos en Google Maps</h2>
+                <p class="mt-2 text-lg text-white-600">Visítanos en nuestra ubicación principal en la cima del Panecillo con vista panorámica a la ciudad.</p>
+            </div>
+            
+            <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg">
+                <iframe 
+                    class="w-full h-full border-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7916869078117!2d-78.49425402500464!3d-0.20935093539730187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a10b8c57123%3A0x7cc4dcd53937a7dd!2sPontificia%20Universidad%20Cat%C3%B3lica%20del%20Ecuador!5e0!3m2!1ses-419!2sec!4v1787785032896!5m2!1ses-419!2sec">
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+  <footer class="color-letra2">
     <div class="max-w-screen-xl mx-auto p-6 md:py-8">
       <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
         
@@ -158,6 +223,7 @@
     </div>
   </footer>
 
-
-  </body>
+    <!-- Flowbite Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
 </html>
