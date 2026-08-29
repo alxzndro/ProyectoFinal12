@@ -1,163 +1,355 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="./src/asstes/images/Zayo.jpeg"/>
-    <title>Zayo</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-     <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Cinzel', serif;
-        }
-      </style>
-    
-    
-  </head>
-  <body>
+<html lang="es">
 
-<nav class="fixed top-0 start-0 w-full z-50 bg-black border-b border-neutral-800">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="./src/asstes/images/ZayoLogo2.png" class="h-8" alt="Zayo Logo" width="100">
-  </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-    <a href="/src/pages/reserva.html">
-      <button type="button" class="btn-dorado focus:ring-4 focus:outline-none focus:ring-yellow-600/50 font-medium rounded-lg text-sm px-4 py-3 text-center">RESERVA AHORA</button >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zayo</title>
+
+  <link rel="icon" type="image/jpeg" href="./src/asstes/images/Zayo.jpeg">
+
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Cinzel', serif;
+    }
+  </style>
+</head>
+
+
+<body>
+  <nav class="fixed top-0 start-0 w-full z-50 bg-black border-b border-neutral-800">
+
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+      <a
+        href="/index.html"
+        class="flex items-center space-x-3 rtl:space-x-reverse"
+      >
+        <img
+          src="./src/asstes/images/ZayoLogo2.png"
+          class="h-8"
+          alt="Zayo Logo"
+          width="100"
+        >
+      </a>
+
+
+
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+
+        <a href="/src/pages/reserva.html">
+          <button
+            type="button"
+            class="btn-dorado focus:ring-4 focus:outline-none focus:ring-yellow-600/50 font-medium rounded-lg text-sm px-4 py-3 text-center">
+            RESERVA AHORA
+          </button>
         </a>
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-  </div>
-  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex flex-col p-4 md:p-0 mt-4 md:space-x-20 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-      <li>
-    <a href="/index.html"
-       class="color-letra" 
-       aria-current="page">
-        INICIO
-    </a>
-</li>
-     <li>
-    <a href="/src/pages/menu.html"
-       class="color-letra" 
-       aria-current="page">
-        MENÚ
-    </a>
-</li>
-     <li>
-    <a href="/src/pages/locales.html"
-       class="color-letra" 
-       aria-current="page">
-        LOCALES
-    </a>
-</li>
-      <li>
-    <a href="/src/pages/historia.html"
-       class="color-letra"
-       aria-current="page">
-        HISTORIA
-    </a>
-</li>
-      <li>
-    <a href="/src/pages/galeria.html"
-       class="color-letra" 
-       aria-current="page">
-        GALERÍA
-    </a>
-</li>
 
+        <button
+          data-collapse-toggle="navbar-sticky"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-sticky"
+          aria-expanded="false">
 
-    </ul>
-  </div>
-  </div>
-</nav>
+          <span class="sr-only"> Abrir menú principal </span>
 
-<br><br>
-<br><br>
-<br><br>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
 
-<section class="bg-black dark:bg-gray-900">
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div class="mr-auto place-self-center lg:col-span-7">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Restaurante Zayo ¡Comida llena de luvia de sensaciones! </h1><br>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"> nace con la idea de crear un espacio donde la gastronomía, la elegancia y los buenos momentos se encuentren en un mismo lugar. Nuestra propuesta combina sabores cuidadosamente seleccionados con una presentación sofisticada y un ambiente moderno y acogedor.</p><br>
-            
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Grafica De Reservas
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </div>
+
+      <div
+        class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+        id="navbar-sticky"
+      >
+
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-4 md:space-x-20 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+        >
+
+          <li>
+            <a
+              href="/index.html"
+              class="color-letra"
+              aria-current="page"
+            >
+              INICIO
             </a>
-            <a href="/src/pages/grafica.html" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-gray-300 rounded-full focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Mirar AHORA!
-            </a> 
+          </li>
+
+          <li>
+            <a
+              href="/src/pages/menu.html"
+              class="color-letra"
+            >
+              MENÚ
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/src/pages/locales.html"
+              class="color-letra"
+            >
+              LOCALES
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/src/pages/historia.html"
+              class="color-letra"
+            >
+              HISTORIA
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/src/pages/galeria.html"
+              class="color-letra"
+            >
+              GALERÍA
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+
+
+  <div class="pt-24"></div>
+
+  <section class="bg-black">
+
+    <div
+      class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+
+      <div class="mr-auto place-self-center lg:col-span-7">
+
+        <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
+          Restaurante Zayo
+          <br>
+          ¡Comida llena de lluvia de sensaciones!</h1>
+
+        <p class="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl">
+          Zayo nace con la idea de crear un espacio donde la gastronomía,
+          la elegancia y los buenos momentos se encuentren en un mismo lugar.
+          Nuestra propuesta combina sabores cuidadosamente seleccionados
+          con una presentación sofisticada y un ambiente moderno y acogedor.</p>
+
+        <div class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-600" <a>Mirar Reservas-></a>
         </div>
-        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+
+
+        <button
+          type="button"
+          data-modal-target="default-modal"
+          data-modal-toggle="default-modal"
+
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-gray-600 rounded-full hover:bg-gray-800 focus:ring-4 focus:ring-gray-700">MIRAR AHORA</button>
+      </div>
+
+    <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img src="/src/asstes/images/Carne1.jpg" alt="mockup">
                    
     </div>
-</section>
 
-
-
-
-
-    <div id="app"></div>
-    <script type="module" src="/src/js/main.js"></script>
- 
-  
-        <!-- Footer -->
- <footer class="color-letra2">
-    <div class="max-w-screen-xl mx-auto p-6 md:py-8">
-      <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
-        
-        <!-- Logo y Nombre -->
-        <a href="/index.html" class="flex items-center space-x-3">
-            <img src="/src/asstes/images/ZayoLogo.png" alt="Zayo Logo" width="100">
-        
-
-        <!-- Enlaces de Redes Sociales -->
-        <div class="flex flex-wrap justify-center gap-6">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="color-redes transition-colors duration-200 flex items-center space-x-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
-            <span>Facebook</span>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="color-redes transition-colors duration-200 flex items-center space-x-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zM17.485 5.246a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
-            <span>Instagram</span>
-          </a>
-          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="color-redes transition-colors duration-200 flex items-center space-x-2">
-            <!-- Icono SVG simple para TikTok -->
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.74-3.94-1.74-.22-.2-.42-.43-.61-.67-.02 1.91-.01 3.83-.02 5.74 0 2.34-.74 4.71-2.39 6.38-1.7 1.75-4.22 2.49-6.55 2.15-2.61-.31-5.04-2.15-5.91-4.66-.99-2.73-.39-6.02 1.6-8.15 1.62-1.79 4.14-2.54 6.49-2.1v4.13c-1.4-.23-2.92.23-3.79 1.34-.86 1.05-1.01 2.58-.45 3.82.52 1.21 1.79 2.05 3.09 2.03 1.54.04 2.94-1.03 3.25-2.54.09-.37.12-.76.12-1.15V0h-.13z"/></svg>
-            <span>TikTok</span>
-          </a>
-          <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="color-redes transition-colors duration-200 flex items-center space-x-2">
-            <!-- Icono SVG simple para WhatsApp -->
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.454L0 24zm6.59-3.513c1.6.95 3.197 1.451 4.82 1.452 5.532 0 10.032-4.502 10.035-10.04.001-2.683-1.04-5.205-2.933-7.1a10.01 10.01 0 00-7.103-2.94C5.908 1.859 1.41 6.362 1.408 11.9c-.001 1.66.437 3.284 1.269 4.717l-.955 3.488 3.57-.936z"/></svg>
-            <span>WhatsApp</span>
-          </a>
-        </div>
       </div>
 
-      <hr class="my-6 border-gray-800 sm:mx-auto lg:my-8" />
-      
-      <!-- Derechos de autor -->
-      <span class="block text-sm text-center text-gray-500">
-        © 2026 Zayo. Todos los derechos reservados. Hecho con en Ecuador.
-      </span>
     </div>
-  </footer>
+
+  </section>
 
 
-  </body>
+  <div
+    id="default-modal"
+    tabindex="-1"
+    aria-hidden="true"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+      <div class="relative bg-black rounded-lg shadow-xl border border-neutral-800">
+        <div class="flex items-center justify-between p-4 md:p-5 border-b border-neutral-800">
+          <div>
+            <h3 class="text-xl font-semibold text-white">
+              Gráfica de Reservas
+            </h3>
+
+            <p class="text-sm text-gray-400 mt-1">
+              Estadísticas de reservas de Zayo
+            </p>
+          </div>
+
+          <button
+            type="button"
+            class="text-gray-400 bg-transparent hover:bg-gray-800 hover:text-white rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center"
+            data-modal-hide="default-modal">
+
+            <svg
+              class="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14">
+
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+
+            <span class="sr-only">
+              Cerrar
+            </span>
+
+          </button>
+
+        </div>
+
+
+
+        <div class="p-4 md:p-6">
+
+          <div
+            class="flex justify-between pb-4 mb-4 border-b border-neutral-700">
+
+            <div class="flex items-center">
+
+              <div
+                class="w-12 h-12 rounded-lg bg-neutral-800 flex items-center justify-center me-3">
+
+                <svg
+                  class="w-6 h-6 text-yellow-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 19">
+                  <path
+                    d="M14.5 0A3.987 3.987 0 0 0 11 2.1a4.977 4.977 0 0 1 3.9 5.858A3.989 3.989 0 0 0 14.5 0ZM9 13h2a4 4 0 0 1 4 4v2H5v-2a4 4 0 0 1 4-4Z"/>
+
+                  <path
+                    d="M5 19h10v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2ZM5 7a5.008 5.008 0 0 1 4-4.9 3.988 3.988 0 1 0-3.9 5.859A4.974 4.974 0 0 1 5 7Zm5 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm5-1h-.424a5.016 5.016 0 0 1-1.942 2.232A6.007 6.007 0 0 1 17 17h2a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5ZM5.424 9H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h2a6.007 6.007 0 0 1 4.366-5.768A5.016 5.016 0 0 1 5.424 9Z"/>
+
+                </svg>
+              </div>
+              <div>
+
+                <h5 class="leading-none text-2xl font-bold text-white pb-1">199</h5>
+                <p class="text-sm font-normal text-gray-400">Reservas totales generadas</p>
+              </div>
+            </div>
+            <div>
+            </div>
+          </div>
+
+          <div id="column-chart"></div>
+
+          <div
+            class="grid grid-cols-1 items-center border-neutral-700 border-t justify-between">
+
+            <div class="flex justify-between items-center pt-5">
+
+      
+            
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+   
+        <div
+          class="flex items-center justify-end p-4 md:p-5 border-t border-neutral-800">
+
+          <button
+            data-modal-hide="default-modal"
+            type="button"
+            class="text-black bg-yellow-600 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-700 font-medium rounded-lg text-sm px-5 py-2.5">
+            Aceptar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="app"></div>
+
+  <footer class="bg-black color-letra2 w-full block relative max-w-screen-xl mx-auto p-6 mt-8">
+    <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+      <a href="/index.html" class="flex items-center space-x-3">
+          <img src="/src/asstes/images/ZayoLogo.png" alt="Zayo Logo" width="100">
+      </a>
+
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="color-redes transition-colors duration-200 flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+          <span>Facebook</span>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="color-redes transition-colors duration-200 flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zM17.485 5.246a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+          <span>Instagram</span>
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="color-redes transition-colors duration-200 flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.74-3.94-1.74-.22-.2-.42-.43-.61-.67-.02 1.91-.01 3.83-.02 5.74 0 2.34-.74 4.71-2.39 6.38-1.7 1.75-4.22 2.49-6.55 2.15-2.61-.31-5.04-2.15-5.91-4.66-.99-2.73-.39-6.02 1.6-8.15 1.62-1.79 4.14-2.54 6.49-2.1v4.13c-1.4-.23-2.92.23-3.79 1.34-.86 1.05-1.01 2.58-.45 3.82.52 1.21 1.79 2.05 3.09 2.03 1.54.04 2.94-1.03 3.25-2.54.09-.37.12-.76.12-1.15V0h-.13z"/></svg>
+          <span>TikTok</span>
+        </a>
+        <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="color-redes transition-colors duration-200 flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.454L0 24zm6.59-3.513c1.6.95 3.197 1.451 4.82 1.452 5.532 0 10.032-4.502 10.035-10.04.001-2.683-1.04-5.205-2.933-7.1a10.01 10.01 0 00-7.103-2.94C5.908 1.859 1.41 6.362 1.408 11.9c-.001 1.66.437 3.284 1.269 4.717l-.955 3.488 3.57-.936z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <hr class="my-6 border-gray-800 sm:mx-auto lg:my-8" />
+    
+    <span class="block text-sm text-center text-gray-500 mt-8">
+      © 2026 Zayo. Todos los derechos reservados. Hecho con en Ecuador.
+    </span>
+  </div>
+      <script src="/src/js/reserva.js"></script>
+</footer>
+
+
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/grafico.js"></script>
+</body>
 </html>
