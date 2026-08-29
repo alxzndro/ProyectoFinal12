@@ -1,0 +1,299 @@
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f7f4;
+    color: #333;
+    min-height: 100vh;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 700px;
+    min-height: 100vh;
+    margin: auto;
+    background: black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER */
+
+header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+.logo {
+    height: 45px;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+.idioma,
+.perfil {
+    background: none;
+    border: none;
+    color: #b89535;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* RESUMEN */
+
+.resumen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 15px 10px;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.dato {
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 8px 15px;
+    font-size: 13px;
+    background: white;
+}
+
+.flecha {
+    color: #aaa;
+}
+
+/* CONTENIDO */
+
+main {
+    padding: 30px 25px 120px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.subtitulo {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.seccion {
+    margin-bottom: 35px;
+    color: black;
+    
+}
+
+.seccion h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 18px;
+    color: white;
+}
+
+/* PERSONAS */
+
+.personas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.persona {
+    width: 55px;
+    height: 45px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.persona:hover,
+.persona.seleccionado {
+    background: #b89535;
+    color: white;
+    border-color: #b89535;
+}
+
+/* FECHAS */
+
+.fechas {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 10px 5px 20px;
+    scrollbar-width: thin;
+}
+
+.fecha {
+    min-width: 90px;
+    padding: 15px 10px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fecha:hover,
+.fecha.seleccionado {
+    background: #b89535;
+    color: white;
+    border-color: #b89535;
+}
+
+.fecha .dia {
+    font-size: 13px;
+    display: block;
+}
+
+.fecha .numero {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.fecha .mes {
+    font-size: 12px;
+}
+
+/* HORARIOS */
+
+.horarios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 350px;
+    margin: auto;
+}
+
+.hora {
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.hora:hover,
+.hora.seleccionado {
+    background: #b89535;
+    color: white;
+    border-color: #b89535;
+}
+
+/* CONFIRMAR */
+
+.confirmar {
+    width: 100%;
+    max-width: 350px;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #b89535;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 20px;
+}
+
+.confirmar:hover {
+    background: #96772b;
+}
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    padding: 15px 25px;
+}
+
+.progreso {
+    height: 6px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progreso-barra {
+    height: 100%;
+    width: 75%;
+    background: #b89535;
+    border-radius: 10px;
+}
+
+.desarrollado {
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    margin-top: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+        box-shadow: none;
+    }
+
+    header {
+        padding: 12px 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .resumen {
+        gap: 6px;
+    }
+
+    .flecha {
+        display: none;
+    }
+
+    .dato {
+        font-size: 12px;
+        padding: 7px 10px;
+
+    }
+}
+
+
