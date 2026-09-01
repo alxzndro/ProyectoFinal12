@@ -264,8 +264,7 @@
                 </svg>
               </div>
               <div>
-
-                <h5 class="leading-none text-2xl font-bold text-white pb-1">199</h5>
+                <h5 id="total-reservas" class="leading-none text-2xl font-bold text-white">0</h5>
                 <p class="text-sm font-normal text-gray-400">Reservas totales generadas</p>
               </div>
             </div>
@@ -274,6 +273,42 @@
           </div>
 
           <div id="column-chart"></div>
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+
+  <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
+    <p class="text-sm text-gray-400">
+      Precio promedio
+    </p>
+    <p id="precio-promedio" class="text-2xl font-bold text-white mt-1">
+      $0.00
+    </p>
+  </div>
+
+  <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
+    <p class="text-sm text-gray-400">
+      Ingreso estimado
+    </p>
+    <p id="ingreso-estimado" class="text-2xl font-bold text-white mt-1">
+      $0.00
+    </p>
+  </div>
+
+  <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
+    <p class="text-sm text-gray-400">
+      Meta semanal
+    </p>
+    <p class="text-2xl font-bold text-white mt-1">
+      $750.00
+    </p>
+  </div>
+
+</div>
+
+<div class="mt-4 text-center">
+  <p id="resultado-meta" class="font-semibold text-lg">
+    Calculando resultado...
+  </p>
+</div>
 
           <div
             class="grid grid-cols-1 items-center border-neutral-700 border-t justify-between">
