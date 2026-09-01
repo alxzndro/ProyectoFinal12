@@ -110,8 +110,6 @@ h1 {
     color: white;
 }
 
-/* PERSONAS */
-
 .personas {
     display: flex;
     justify-content: center;
@@ -137,7 +135,6 @@ h1 {
     border-color: #b89535;
 }
 
-/* FECHAS */
 
 .fechas {
     display: flex;
@@ -180,8 +177,6 @@ h1 {
     font-size: 12px;
 }
 
-/* HORARIOS */
-
 .horarios {
     display: grid;
     grid-template-columns: 1fr;
@@ -207,8 +202,6 @@ h1 {
     border-color: #b89535;
 }
 
-/* CONFIRMAR */
-
 .confirmar {
     width: 100%;
     max-width: 350px;
@@ -227,8 +220,6 @@ h1 {
 .confirmar:hover {
     background: #96772b;
 }
-
-/* FOOTER */
 
 footer {
     position: fixed;
@@ -259,8 +250,6 @@ footer {
     color: #999;
     margin-top: 12px;
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 600px) {
 

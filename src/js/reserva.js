@@ -1,11 +1,6 @@
-let personas = 2;
+let personas = "";
 let fecha = "";
 let hora = "";
-
-
-// ==========================
-// SELECCIONAR PERSONAS
-// ==========================
 
 const botonesPersonas = document.querySelectorAll(".persona");
 
@@ -29,10 +24,6 @@ botonesPersonas.forEach(function (boton) {
 });
 
 
-// ==========================
-// SELECCIONAR FECHA
-// ==========================
-
 const botonesFecha = document.querySelectorAll(".fecha");
 
 botonesFecha.forEach(function (boton) {
@@ -54,10 +45,6 @@ botonesFecha.forEach(function (boton) {
 });
 
 
-// ==========================
-// SELECCIONAR HORA
-// ==========================
-
 const botonesHora = document.querySelectorAll(".hora");
 
 botonesHora.forEach(function (boton) {
@@ -78,10 +65,6 @@ botonesHora.forEach(function (boton) {
 
 });
 
-
-// ==========================
-// CONFIRMAR RESERVA
-// ==========================
 
 document.getElementById("confirmar").addEventListener("click", function () {
 
